@@ -15,6 +15,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: demo2026
   name: environment-config
 data:
   LOCAL_ROUTING_NUM: "883745000"
@@ -23,6 +24,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: demo2026
   name: service-api-config
 data:
   TRANSACTIONS_API_ADDR: "ledgerwriter:8080"
@@ -34,6 +36,7 @@ data:
 apiVersion: v1
 kind: ConfigMap
 metadata:
+  namespace: demo2026
   name: demo-data-config
 data:
   USE_DEMO_DATA: "True"
@@ -44,6 +47,7 @@ data:
 apiVersion: v1
 kind: ServiceAccount
 metadata:
+  namespace: demo2026
   annotations:
     iam.gke.io/gcp-service-account: gke-workload-development@bank-of-anthos-ci.iam.gserviceaccount.com
   name: bank-of-anthos
